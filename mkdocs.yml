@@ -1,0 +1,10 @@
+site_name: pytest-performance
+site_description: A simple plugin to ensure the execution of critical sections of code has not been impacted
+site_author: Rupert Cobbe-Warburton
+
+theme: readthedocs
+
+repo_url: https://github.com/rupertcw/pytest-performance
+
+pages:
+- Home: index.md
