@@ -34,6 +34,7 @@ Requirements
 ------------
 
 * pint == 0.15
+* numpy
 
 
 Installation
@@ -97,10 +98,12 @@ Usage
 
 * Fixture can be disabled by passing '--performance-skip' to pytest
 
+
 Contributing
 ------------
 Contributions are very welcome. Tests can be run with `tox`_, please ensure
 the coverage at least stays the same before you submit a pull request.
+
 
 License
 -------
