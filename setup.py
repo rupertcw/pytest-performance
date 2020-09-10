@@ -18,7 +18,7 @@ setup(
     author_email='rupertcw10@gmail.com',
     maintainer='Rupert Cobbe-Warburton',
     maintainer_email='rupertcw10@gmail.com',
-    license='BSD-3',
+    license='MIT',
     url='https://github.com/rupertcw/pytest-performance',
     description='A simple plugin to ensure the execution of critical sections of code has not been impacted',
     long_description=read('README.rst'),
@@ -37,7 +37,7 @@ setup(
         'Programming Language :: Python :: 3 :: Only',
         'Programming Language :: Python :: Implementation :: CPython',
         'Operating System :: OS Independent',
-        'License :: OSI Approved :: BSD License',
+        'License :: OSI Approved :: MIT License',
     ],
     entry_points={
         'pytest11': [
