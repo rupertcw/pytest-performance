@@ -13,18 +13,19 @@ def read(fname):
 
 setup(
     name='pytest-performance',
-    version='0.1.0',
+    version='0.7.0',
     author='Rupert Cobbe-Warburton',
     author_email='rupertcw10@gmail.com',
     maintainer='Rupert Cobbe-Warburton',
     maintainer_email='rupertcw10@gmail.com',
     license='MIT',
     url='https://github.com/rupertcw/pytest-performance',
-    description='A simple plugin to ensure the execution of critical sections of code has not been impacted',
+    description='A simple plugin to ensure the execution of '
+                'critical sections of code has not been impacted',
     long_description=read('README.rst'),
     py_modules=['pytest_performance'],
     python_requires='>=3.7',
-    install_requires=['pytest>=3.7.0'],
+    install_requires=['pytest>=3.7.0', 'Pint>=0.15,<1.0', 'numpy'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Framework :: Pytest',
@@ -33,7 +34,6 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3 :: Only',
         'Programming Language :: Python :: Implementation :: CPython',
         'Operating System :: OS Independent',
