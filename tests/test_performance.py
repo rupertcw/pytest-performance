@@ -6,7 +6,7 @@ from pytest_performance import SKIP_FLAG
 
 def test_performance(testdir):
     # Given
-    testdir.makepyfile("""        
+    testdir.makepyfile("""
         def foo():
             return 1
 
@@ -27,11 +27,11 @@ def test_performance_slow(testdir):
         import pytest
         import time
         from pytest_performance import PerformanceException
-        
-        def foo():    
+
+        def foo():
             time.sleep(2)
             return 1
-            
+
         def test_sth(performance):
             with pytest.raises(PerformanceException):
                 performance(foo)
@@ -51,7 +51,7 @@ def test_performance_disable(testdir):
         import time
         from pytest_performance import PerformanceException
 
-        def foo():    
+        def foo():
             time.sleep(2)
             return 1
 

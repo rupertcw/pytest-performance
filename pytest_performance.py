@@ -44,10 +44,14 @@ class PerformanceFixture:
     def _compare_to_target(self, actual):
         func_time_unit = actual.to(self._unit)
         if func_time_unit > self._target:
-            raise PerformanceException(self._func_name, self._target, func_time_unit)
+            raise PerformanceException(
+                self._func_name, self._target, func_time_unit
+            )
 
     def __call__(
-            self, func, *args, target=1000, unit=ureg.ms, iterations=10000, **kwargs
+            self, func, *args,
+            target=1000, unit=ureg.ms, iterations=10000,
+            **kwargs
     ):
         self._unit = ureg.parse_expression(str(unit))
         self._target = target * self._unit
@@ -70,7 +74,10 @@ class PerformanceFixture:
         # Run the remaining iterations
         times = [dur]
         times.extend(
-            [self._profile(func, *args, **kwargs)[1] for _ in range(1, iterations)]
+            [
+                self._profile(func, *args, **kwargs)[1]
+                for _ in range(1, iterations)
+            ]
         )
         mean_time = np.mean(np.ascontiguousarray(times)) * ureg.s
         self._compare_to_target(mean_time)
