@@ -13,7 +13,7 @@ def read(fname):
 
 setup(
     name='pytest-performance',
-    version='0.7.0',
+    version='0.1.0',
     author='Rupert Cobbe-Warburton',
     author_email='rupertcw10@gmail.com',
     maintainer='Rupert Cobbe-Warburton',
@@ -25,9 +25,9 @@ setup(
     long_description=read('README.rst'),
     py_modules=['pytest_performance'],
     python_requires='>=3.7',
-    install_requires=['pytest>=3.7.0', 'Pint>=0.15,<1.0', 'numpy'],
+    install_requires=['pytest>=3.7.0', 'pint>=0.15,<1.0', 'numpy'],
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Framework :: Pytest',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Testing',
