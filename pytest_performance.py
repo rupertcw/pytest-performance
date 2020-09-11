@@ -23,9 +23,9 @@ class PerformanceException(Exception):
     def __init__(self, func_name, expected_time, actual_time):
         super(PerformanceException, self).__init__(
             '\n'.join([
-                f'Function "{func_name}" too slow!',
-                f'Expected execution time: {expected_time:~}',
-                f'Actual execution time: {actual_time:~.5f}',
+                'Function "{}" too slow!'.format(func_name),
+                'Expected execution time: {:~}'.format(expected_time),
+                'Actual execution time: {:~.5f}'.format(actual_time),
             ])
         )
 
