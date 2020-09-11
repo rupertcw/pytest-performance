@@ -30,13 +30,6 @@ Features
 * Support for all time measurement units
 
 
-Requirements
-------------
-
-* pint == 0.15
-* numpy
-
-
 Installation
 ------------
 
