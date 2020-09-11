@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import logging
 import numpy as np
 import pint
 import pytest
@@ -7,7 +6,6 @@ import time
 
 
 SKIP_FLAG = '--performance-skip'
-logger = logging.getLogger(__name__)
 ureg = pint.UnitRegistry()
 
 
@@ -62,14 +60,6 @@ class PerformanceFixture:
         result, dur = self._profile(func, *args, **kwargs)
         func_time_s = dur * ureg.s
         self._compare_to_target(func_time_s)
-
-        test_time_s = func_time_s * iterations
-        logger.info('\n'.join([
-            f'Function took {func_time_s:~.5f}',
-            f'Test should take approx. {test_time_s:~.2f}/'
-            f'{test_time_s.to(ureg.min):~.2f}/'
-            f'{test_time_s.to(ureg.hr):~.2f}...'
-        ]))
 
         # Run the remaining iterations
         times = [dur]
