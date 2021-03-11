@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import numpy as np
 import pint
 import pytest
@@ -80,4 +79,4 @@ def performance(request):
     skip = request.config.getoption(SKIP_FLAG)
     if not skip:
         return PerformanceFixture()
-    pytest.skip(f"Performance checks are skipped ({SKIP_FLAG} was not used).")
+    pytest.skip(f"Performance checks are skipped ({SKIP_FLAG} was used).")
