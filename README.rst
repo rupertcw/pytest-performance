@@ -91,6 +91,21 @@ Usage
 
 * Fixture can be disabled by passing '--performance-skip' to pytest
 
+* Profiling of async functions
+
+.. code-block:: python
+
+    import from pytest_performance import async_performance
+
+    async def my_func(*args, **kwargs):
+        return 123
+
+    @pytest.mark.asyncio
+    async def test_my_func(async_performance):
+        # Check my_func runs within 1 nanosecond for 10 iterations.
+        result = await async_performance(my_func, target=10, unit='ns', iterations=10)
+        assert result == 123
+
 
 Contributing
 ------------
